@@ -10,11 +10,11 @@
 
 
 function mycrud( $data ) {
-  return $data
+  return 'world';
 }
 
 add_action( 'rest_api_init', function () {
-  register_rest_route( 'mycrud/v1', '/get/(?P<id>\d+)', array(
+  register_rest_route( 'mycrud/v1', '/hello', array(
     'methods' => 'GET',
     'callback' => 'mycrud',
   ) );
